@@ -21,7 +21,7 @@ WORKDIR /app
 
 ## copy the build jar from the previous stage
 
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/target*.jar app.jar
 
 EXPOSE 8080
 
