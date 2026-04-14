@@ -18,9 +18,9 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy the built jar from the previous stage
-COPY --from=build /app/target/app-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build app/target/spring-petclinic-4.0.0-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
 # Run the app
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/spring-petclinic.jar"]
